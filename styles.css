@@ -91,3 +91,15 @@ footer {
     background: #fff;
     color: #333;
 }
+
+.video-container {
+    display: flex;
+    justify-content: center; /* 将视频靠拢 */
+    align-items: center;     /* 垂直对齐 */
+    gap: 10px;               /* 视频之间的间距 */
+}
+
+video {
+    border: 2px solid #ccc; /* 可选：给视频添加边框 */
+    border-radius: 8px;     /* 可选：圆角边框 */
+}
