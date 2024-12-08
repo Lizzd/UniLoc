@@ -7,60 +7,98 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>UniLoc: Towards Universal Place Recognition Using Any Single Modality</h1>
-            <p>Yan Xia, Zhendong Li, Yun-Jin Li, Letian Shi, Hu Cao, Joao F. Henriques, Daniel Cremers</p>
-        </div>
-    </header>
+<header>
+    <div class="container">
+        <h1>UniLoc: Towards Universal Place Recognition Using Any Single Modality</h1>
+        <p>Yan Xia<sup>*</sup>, Zhendong Li<sup>*</sup>, Yun-Jin Li, Letian Shi, Hu Cao, Joao F. Henriques, Daniel Cremers</p>
+    </div>
+</header>
 
-    <main>
-        <div class="container">
-            <section class="gallery">
-                <h2>Abstract</h2>
-                <p>This is where you introduce your project. You can talk about the problem, your approach, and the outcome.</p>
-            </section>
+<main>
+    <div class="container">
 
-            <section class="gallery">
-                <h2>UniLoc Performance</h2>
-<!--                <ul>-->
-<!--                    <li>Feature 1: Description of feature 1.</li>-->
-<!--                    <li>Feature 2: Description of feature 2.</li>-->
-<!--                    <li>Feature 3: Description of feature 3.</li>-->
-<!--                </ul>-->
-            </section>
+        <section class="gallery">
+            <h2>Demo</h2>
+            <video controls width="500" height="300">
+                <source src="https://drive.google.com/uc?export=download&id=1s2TziXNPAOTWeDbhlJMEKTcWKMtc3yWz"
+                        type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
 
-            <section class="gallery">
-                <h2>Approach</h2>
-                <p>This is where you introduce your project. You can talk about the problem, your approach, and the outcome.</p>
-            </section>
+        <section class="abstract-section">
+            <h2 style="text-align: center;">Abstract</h2>
+            <p>To date, most place recognition methods focus on single-modality retrieval. While they perform well in
+                specific environments, cross-modal methods offer greater flexibility by allowing seamless switching
+                between map and query sources.
+                It also promises to reduce computation requirements by having a unified model, and achieving greater
+                sample efficiency by sharing parameters.
+                In this work, we develop a universal solution to place recognition, UniLoc, that works with any single
+                query modality (natural language, image, or point cloud).
+                UniLoc leverages recent advances in large-scale contrastive learning, and learns by matching
+                hierarchically at two levels: instance-level matching and scene-level matching.
+                Specifically, we propose a novel Self-Attention based Pooling (SAP) module to evaluate the importance of
+                instance descriptors when aggregated into a place-level descriptor.
+                Experiments on the KITTI-360 dataset demonstrate the benefits of cross-modality for place recognition,
+                achieving superior performance in cross-modal settings and competitive results also for uni-modal
+                scenarios. The code will be available upon acceptance.</p>
 
-            <section class="demo">
-                <h2>Demo</h2>
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video demo" frameborder="0" allowfullscreen></iframe>
-            </section>
+        </section>
+        <img src="cover3.png" width="1027" height="320"
+             style="display: block; margin: 0 auto; padding: 0; border: none;">
+        <!--            <section class="gallery">-->
+        <!--                <h2>UniLoc Performance</h2>-->
+        <!--&lt;!&ndash;                <embed src="performance.pdf" width="600" height="800" type="application/pdf">&ndash;&gt;-->
+        <!--                <img src="performance.png" width="643" height="718" style="display: block; margin: 0 auto; padding: 0; border: none;">-->
 
-<!--            <section class="gallery">-->
-<!--                <h2>Gallery</h2>-->
-<!--                <div class="gallery-grid">-->
-<!--                    <img src="image1.jpg" alt="Image 1">-->
-<!--                    <img src="image2.jpg" alt="Image 2">-->
-<!--                    <img src="image3.jpg" alt="Image 3">-->
-<!--                </div>-->
-<!--            </section>-->
+        <!--&lt;!&ndash;                <ul>&ndash;&gt;-->
+        <!--&lt;!&ndash;                    <li>Feature 1: Description of feature 1.</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;                    <li>Feature 2: Description of feature 2.</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;                    <li>Feature 3: Description of feature 3.</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+        <!--            </section>-->
 
-            <section class="team">
-                <h2>Team</h2>
-                <p>Names of team members and contributors can go here.</p>
-            </section>
-        </div>
-    </main>
+        <section class="gallery">
+            <h2>Approach</h2>
+            <p>This is where you introduce your project. You can talk about the problem, your approach, and the
+                outcome.</p>
+        </section>
+        <img src="pipeline.png" width="1027" height="250"
+             style="display: block; margin: 0 auto; padding: 0; border: none;">
+        <!--            <section class="gallery">-->
+        <!--                <h2>Demo</h2>-->
+        <!--&lt;!&ndash;                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video demo" frameborder="0" allowfullscreen></iframe>&ndash;&gt;-->
+        <!--                 <source src="https://drive.google.com/drive/folders/1KhVOgard8C4Og8N9sPKrW_BDY3WspnS4?hl=DE/text_to_image.mp4" type="video/mp4">-->
+        <!--            </section>-->
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Your Project Name. All rights reserved.</p>
-        </div>
-    </footer>
+
+        <section class="BibTeX">
+            <h2>BibTeX</h2>
+            <p> tbd
+        </section>
+
+
+        <!--            <section class="gallery">-->
+        <!--                <h2>Gallery</h2>-->
+        <!--                <div class="gallery-grid">-->
+        <!--                    <img src="image1.jpg" alt="Image 1">-->
+        <!--                    <img src="image2.jpg" alt="Image 2">-->
+        <!--                    <img src="image3.jpg" alt="Image 3">-->
+        <!--                </div>-->
+        <!--            </section>-->
+
+        <!--            <section class="team">-->
+        <!--                <h2>Team</h2>-->
+        <!--                <p>Names of team members and contributors can go here.</p>-->
+        <!--            </section>-->
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Your Project Name. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>
 

@@ -8,19 +8,19 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f5f5f5;
+  background-color: #fff; /* Set white background for the entire page */
 }
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #4b79a1, #283e51);
-  color: #fff;
+  /*background: linear-gradient(135deg, #4b79a1, #283e51);*/
+  /*color: #fff;*/
   padding: 20px 0;
   text-align: center;
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 header p {
@@ -33,6 +33,14 @@ header p {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.abstract-section {
+  width: 70%; /* The width of the abstract section */
+  background-color: #fff; /* Light background color */
+  padding: 20px 0; /* Vertical padding */
+  margin: 0 auto; /* Centers the section itself */
+  text-align: left; /* Aligns the text content to the left */
 }
 
 main {
@@ -61,17 +69,25 @@ ul {
   text-align: center;
 }
 
+/*.gallery img {*/
+/*  max-width: 100%;*/
+/*  height: auto;*/
+/*  border: 5px solid #ddd;*/
+/*  border-radius: 5px;*/
+/*}*/
+
 .gallery img {
-  max-width: 100%;
-  height: auto;
-  border: 5px solid #ddd;
-  border-radius: 5px;
+    border: none;
 }
 
 /* Footer */
+/*footer {*/
+/*  background: #283e51;*/
+/*  color: #fff;*/
+/*  text-align: center;*/
+/*  padding: 10px 0;*/
+/*}*/
 footer {
-  background: #283e51;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
+    background: #fff;
+    color: #333;
 }
