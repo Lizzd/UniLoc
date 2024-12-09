@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Overview</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
 <header>
@@ -77,47 +78,135 @@
                 Experiments on the KITTI-360 dataset demonstrate the benefits of cross-modality for place recognition,
                 achieving superior performance in cross-modal settings and competitive results also for uni-modal
                 scenarios. The code will be available upon acceptance.</p>
-
+            <img src="cover3.png" width="1027" height="320"
+                 style="display: block; margin: 0 auto; padding: 0; border: none;">
         </section>
-        <img src="cover3.png" width="1027" height="320"
-             style="display: block; margin: 0 auto; padding: 0; border: none;">
-        <!--            <section class="gallery">-->
-        <!--                <h2>UniLoc Performance</h2>-->
-        <!--&lt;!&ndash;                <embed src="performance.pdf" width="600" height="800" type="application/pdf">&ndash;&gt;-->
-        <!--                <img src="performance.png" width="643" height="718" style="display: block; margin: 0 auto; padding: 0; border: none;">-->
 
-        <!--&lt;!&ndash;                <ul>&ndash;&gt;-->
-        <!--&lt;!&ndash;                    <li>Feature 1: Description of feature 1.</li>&ndash;&gt;-->
-        <!--&lt;!&ndash;                    <li>Feature 2: Description of feature 2.</li>&ndash;&gt;-->
-        <!--&lt;!&ndash;                    <li>Feature 3: Description of feature 3.</li>&ndash;&gt;-->
-        <!--&lt;!&ndash;                </ul>&ndash;&gt;-->
-        <!--            </section>-->
 
-        <section class="gallery">
-            <h2>Approach</h2>
+        <section class="abstract-section">
+            <h2 style="text-align: center;"> Approach</h2>
             <p>This is where you introduce your project. You can talk about the problem, your approach, and the
                 outcome.</p>
+            <img src="pipeline.png" width="1027" height="250"
+                 style="display: block; margin: 0 auto; padding: 0; border: none;">
         </section>
-        <img src="pipeline.png" width="1027" height="250"
-             style="display: block; margin: 0 auto; padding: 0; border: none;">
-        <!--            <section class="gallery">-->
-        <!--                <h2>Demo</h2>-->
-        <!--&lt;!&ndash;                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video demo" frameborder="0" allowfullscreen></iframe>&ndash;&gt;-->
-        <!--                 <source src="https://drive.google.com/drive/folders/1KhVOgard8C4Og8N9sPKrW_BDY3WspnS4?hl=DE/text_to_image.mp4" type="video/mp4">-->
-        <!--            </section>-->
 
 
-        <section class="BibTeX">
+        <section class="abstract-section">
+            <h2 style="text-align: center;"> Examples</h2>
+            <div class="slider-container">
+                <!-- Left arrow -->
+                <button class="arrow prev">&#10094;</button>
+
+                <!-- Slides -->
+                <div class="slides">
+                    <div class="slide">
+                        <img src="static/images/T2I_172.png"
+                             alt="Successful Text-to-Image place recognition on KITTI-360 (09)">
+                        <h4>Successful Text-to-Image place recognition on KITTI-360 (09)</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="static/images/T2I_82.png"
+                             alt="Unsuccessful Text-to-Image place recognition on KITTI-360 (09)">
+                        <h4>Unsuccessful Text-to-Image place recognition on KITTI-360 (09)</h4>
+                    </div>
+
+                    <div class="slide">
+                        <img src="static/images/T2P_172.png"
+                             alt="Successful Text-to-LiDAR place recognition on KITTI-360 (09)">
+                        <h4>Successful Text-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="static/images/T2P_82.png"
+                             alt="Unsuccessful Text-to-LiDAR place recognition on KITTI-360 (09)">
+                        <h4>Unsuccessful Text-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                    </div>
+
+
+                    <div class="slide">
+                        <img src="static/images/I2P_172.png"
+                             alt="Successful Image-to-LiDAR place recognition on KITTI-360 (09)">
+                        <h4>Successful Image-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="static/images/I2P_80.png"
+                             alt="Unsuccessful Image-to-LiDAR place recognition on KITTI-360 (09)">
+                        <h4>Unsuccessful Image-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                    </div>
+
+
+                    <div class="slide">
+                        <img src="static/images/P2I_172.png"
+                             alt="Successful LiDAR-to-Image place recognition on KITTI-360 (09)">
+                        <h4>Successful LiDAR-to-Image place recognition on KITTI-360 (09)</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="static/images/P2I_65.png"
+                             alt="Unsuccessful LiDAR-to-Image place recognition on KITTI-360 (09)">
+                        <h4>Unsuccessful LiDAR-to-Image place recognition on KITTI-360 (09)</h4>
+                    </div>
+
+
+                    <div class="slide">
+                        <img src="static/images/I2I_172.png"
+                             alt="Successful Image-to-Image place recognition on KITTI-360 (09)">
+                        <h4>Successful Image-to-Image place recognition on KITTI-360 (09)</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="static/images/I2I_78.png"
+                             alt="Unsuccessful Image-to-Image place recognition on KITTI-360 (09)">
+                        <h4>Unsuccessful Image-to-Image place recognition on KITTI-360 (09)</h4>
+                    </div>
+
+                    <div class="slide">
+                        <img src="static/images/P2P_172.png"
+                             alt="Successful LiDAR-to-LiDAR place recognition on KITTI-360 (09)">
+                        <h4>Successful LiDAR-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="static/images/P2P_141.png"
+                             alt="Unsuccessful LiDAR-to-LiDAR place recognition on KITTI-360 (09)">
+                        <h4>Unsuccessful LiDAR-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                    </div>
+
+
+                </div>
+                <!-- Right arrow -->
+                <button class="arrow next">&#10095;</button>
+            </div>
+
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <section class="BibTeX-container">
             <h2>BibTeX</h2>
-            <p> tbd
+            <div class="BibTeX">
+                <p>tbd</p>
+            </div>
         </section>
-
     </div>
 </main>
 
-<footer>
+<footer class="footer">
     <div class="container">
-        <p>&copy; 2024 Your Project Name. All rights reserved.</p>
+        <p>This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                Creative Commons Attribution-ShareAlike 4.0 International License
+            </a>.
+        </p>
     </div>
 </footer>
 </body>

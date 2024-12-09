@@ -1,105 +1,209 @@
 /* General Reset */
 body, h1, h2, p, ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff; /* Set white background for the entire page */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff; /* Set white background for the entire page */
 }
 
 /* Header */
 header {
-  /*background: linear-gradient(135deg, #4b79a1, #283e51);*/
-  /*color: #fff;*/
-  padding: 20px 0;
-  text-align: center;
+    /*background: linear-gradient(135deg, #4b79a1, #283e51);*/
+    /*color: #fff;*/
+    padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
-  font-size: 3em;
+    font-size: 3em;
 }
 
 header p {
-  margin-top: 10px;
-  font-size: 1.2em;
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
 /* Main Content */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 75%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .abstract-section {
-  width: 70%; /* The width of the abstract section */
-  background-color: #fff; /* Light background color */
-  padding: 20px 0; /* Vertical padding */
-  margin: 0 auto; /* Centers the section itself */
-  text-align: left; /* Aligns the text content to the left */
+    width: 90%; /* The width of the abstract section */
+    background-color: #fff; /* Light background color */
+    padding: 20px 0; /* Vertical padding */
+    margin: 0 auto; /* Centers the section itself */
+    text-align: left; /* Aligns the text content to the left */
 }
 
 main {
-  padding: 20px 0;
+    padding: 20px 0;
 }
 
 section {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 h2 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
 p {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 ul {
-  list-style-type: disc;
-  padding-left: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 .gallery {
-  text-align: center;
+    text-align: center;
 }
 
-/*.gallery img {*/
-/*  max-width: 100%;*/
-/*  height: auto;*/
-/*  border: 5px solid #ddd;*/
-/*  border-radius: 5px;*/
-/*}*/
 
 .gallery img {
     border: none;
 }
 
-/* Footer */
-/*footer {*/
-/*  background: #283e51;*/
-/*  color: #fff;*/
-/*  text-align: center;*/
-/*  padding: 10px 0;*/
-/*}*/
-footer {
-    background: #fff;
-    color: #333;
+.footer {
+    background-color: #f8f9fa; /* 浅灰背景色 */
+    padding: 20px 15px; /* 上下内边距 */
+    font-size: 14px; /* 字体大小 */
+    color: #333; /* 文字颜色 */
+    text-align: center; /* 居中对齐文字 */
+    border-top: 1px solid #ddd; /* 顶部边框 */
+}
+
+.footer a {
+    color: #007bff; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* 鼠标悬停显示下划线 */
+}
+
+.footer p {
+    margin: 0;
+    line-height: 1.5; /* 行高 */
 }
 
 .video-container {
     display: flex;
     justify-content: center; /* 将视频靠拢 */
-    align-items: center;     /* 垂直对齐 */
-    gap: 10px;               /* 视频之间的间距 */
+    align-items: center; /* 垂直对齐 */
+    gap: 10px; /* 视频之间的间距 */
 }
 
 video {
     border: 2px solid #ccc; /* 可选：给视频添加边框 */
-    border-radius: 8px;     /* 可选：圆角边框 */
+    border-radius: 8px; /* 可选：圆角边框 */
+}
+
+.BibTeX-container h2 {
+    font-family: Arial, sans-serif; /* 标题字体 */
+    margin-bottom: 10px; /* 标题和灰色框之间的间距 */
+}
+
+.BibTeX {
+    background-color: #f8f9fa; /* 浅灰背景色 */
+    padding: 15px; /* 内边距 */
+    border: 1px solid #ccc; /* 灰色边框 */
+    border-radius: 5px; /* 圆角边框 */
+    font-family: "Courier New", Courier, monospace; /* 等宽字体 */
+    overflow-x: auto; /* 处理内容溢出 */
+    margin-top: 0; /* 移除顶部外边距 */
+}
+
+.BibTeX pre {
+    margin: 0;
+    white-space: pre-wrap; /* 保留换行 */
+    word-wrap: break-word; /* 防止超长内容溢出 */
+}
+
+/* Slider container */
+.slider-container {
+    position: relative;
+    width: 100%; /* 适配屏幕宽度 */
+    margin:0 auto;
+    overflow: hidden; /* 隐藏溢出的内容 */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 内容居中 */
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * 12); /* 动态宽度，容纳所有图片 */
+}
+
+/* Single slide */
+.slide {
+    flex: 0 0 100%; /* 每张幻灯片占据 100% 的宽度 */
+    text-align: center;
+}
+
+.slide img {
+    max-width: 70%; /* 确保图片适配幻灯片宽度 */
+    height: auto; /* 保持比例 */
+    margin: auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow:hover {
+    background: #f0f0f0;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 15px; /* 调整圆点与滑窗的距离 */
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
 }
