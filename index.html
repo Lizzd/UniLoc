@@ -1,26 +1,168 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Overview</title>
+    <title>UniLoc: Towards Universal Place Recognition Using Any Single Modality</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
 <body>
-<header>
-    <div class="container">
-        <h1>UniLoc: Towards Universal Place Recognition Using Any Single Modality</h1>
-        <p>Yan Xia<sup>*</sup>, Zhendong Li<sup>*</sup>, Yun-Jin Li, Letian Shi, Hu Cao, Joao F. Henriques, Daniel
-            Cremers</p>
-    </div>
+<header> -->
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+      <!-- Replace the content tag with appropriate information -->
+      <meta name="description" content="UniLoc: Towards Universal Place Recognition Using Any Single Modality">
+      <meta property="og:title" content="UniLoc: Towards Universal Place Recognition Using Any Single Modality"/>
+      <meta property="og:description" content="UniLoc: Towards Universal Place Recognition Using Any Single Modality"/>
+      <meta property="og:url" content="https://lizzd.github.io/UniLoc/"/>
+      <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+      <meta property="og:image" content="static/image/your_banner_image.png" />
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="630"/>
+    
+      <!-- Keywords for your paper to be indexed by-->
+      <meta name="keywords" content="UniLoc, Place Recognition">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+      <title>UniLoc: Towards Universal Place Recognition Using Any Single Modality</title>
+      <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+      <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet">
+    
+      <link rel="stylesheet" href="static/css/bulma.min.css">
+      <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+      <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+      <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+      <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+      <link rel="stylesheet" href="static/css/index.css">
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script defer src="static/js/fontawesome.all.min.js"></script>
+      <script src="static/js/bulma-carousel.min.js"></script>
+      <script src="static/js/bulma-slider.min.js"></script>
+      <script src="static/js/index.js"></script>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">UniLoc: Towards Universal Place Recognition  <br> 
+                    Using Any Single Modality</h1>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                    <a href="https://yan-xia.github.io/">Yan Xia</a><sup>1,2*&dagger;</sup>,</span>
+                  <span class="author-block">
+                    <a href="">Zhendong Li</a><sup>1*</sup>,</span>
+                  <span class="author-block">
+                    <a href="">Yun-Jin Li</a><sup>1</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="">Letian Shi</a><sup>1</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="">Hu Cao</a><sup>1</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://www.robots.ox.ac.uk/~joao/">João F. Henriques</a><sup>3</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://cvg.cit.tum.de/members/cremers">Daniel Cremers</a><sup>1,2</sup>
+                  </span>           
+                </div>
+      
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block"><sup>1</sup>Technical University of Munich</span>
+                  <span class="author-block"><sup>2</sup>Munich Center for Machine Learning</span>
+                  <span class="author-block"><sup>3</sup>VGG, University of Oxford</span>
+                </div>
+      
+                
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                    <!-- PDF Link. -->
+                    <!-- <img src="static/images/cvpr2024.jpg" alt="cvpr icon" width="180" height="40"> -->
+                    <!-- <span class="link-block">
+                      <a href=""
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Camera-ready Paper</span>
+                      </a>
+                    </span> -->
+                    <span class="link-block">
+                      <a href=""
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv soon</span>
+                      </a>
+                    </span>
+                    <!-- Video Link. -->
+                    <!-- <span class="link-block">
+                      <a href="#overview_video"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </span>
+                        <span>Video</span>
+                      </a>
+                    </span> -->
+                    <!-- Supp Link. -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supp.pdf"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Supp</span>
+                      </a>
+                    </span> -->
+                    <!-- Code Link. -->
+                    <span class="link-block">
+                      <a href=""
+                      class="external-link button is-normal is-rounded is-dark">
+                     <span class="icon">
+                         <i class="fab fa-github"></i>
+                     </span>
+                     <span>Code soon</span>
+                     </a>
+                    </span>
+                    <!-- Dataset Link. -->
+                    <!-- <span class="link-block">
+                      <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="far fa-images"></i>
+                        </span>
+                        <span>Data</span>
+                        </a>
+                    </span> -->
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 </header>
 
 <main>
     <div class="container">
 
         <section class="gallery">
-            <h2>Demo</h2>
+            <!-- <h2>Demo</h2> -->
             <!--            <video controls width="500" height="300">-->
             <!--                <source src="static/videos/Text_to_Image.mp4" type="video/mp4">-->
             <!--                Your browser does not support the video tag.-->
@@ -29,32 +171,32 @@
             <!--                <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">-->
             <!--            </video>-->
 
-            <div class="video-container">
-                <video id="video1" autoplay muted loop playsinline controls width="500" height="300">
+            <div class="video-container is-max-desktop">
+                <video id="video1" autoplay muted loop playsinline controls width="600" height="300">
                     <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">
                 </video>
 
-                <video id="video2" autoplay muted loop playsinline controls width="500" height="300">
+                <video id="video2" autoplay muted loop playsinline controls width="600" height="300">
                     <source src="static/videos/Text_to_LiDAR_resized.mp4" type="video/mp4">
                 </video>
             </div>
 
             <div class="video-container">
-                <video id="video3" autoplay muted loop playsinline controls width="500" height="300">
+                <video id="video3" autoplay muted loop playsinline controls width="600" height="300">
                     <source src="static/videos/Image_to_LiDAR_resized.mp4" type="video/mp4">
                 </video>
 
-                <video id="video4" autoplay muted loop playsinline controls width="500" height="300">
+                <video id="video4" autoplay muted loop playsinline controls width="600" height="300">
                     <source src="static/videos/LiDAR_to_Image_resized.mp4" type="video/mp4">
                 </video>
             </div>
 
             <div class="video-container">
-                <video id="video5" autoplay muted loop playsinline controls width="500" height="300">
+                <video id="video5" autoplay muted loop playsinline controls width="600" height="300">
                     <source src="static/videos/Image_to_Image_resized.mp4" type="video/mp4">
                 </video>
 
-                <video id="video6" autoplay muted loop playsinline controls width="500" height="300">
+                <video id="video6" autoplay muted loop playsinline controls width="600" height="300">
                     <source src="static/videos/LiDAR_to_LiDAR_resized.mp4" type="video/mp4">
                 </video>
             </div>
