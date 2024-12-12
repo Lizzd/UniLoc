@@ -5,7 +5,7 @@ body, h1, h2, p, ul {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #fff; /* Set white background for the entire page */
@@ -52,8 +52,9 @@ section {
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 p {
@@ -110,7 +111,7 @@ video {
 }
 
 .BibTeX-container h2 {
-    font-family: Arial, sans-serif; /* 标题字体 */
+    font-family: 'Noto Sans', sans-serif; /* 标题字体 */
     margin-bottom: 10px; /* 标题和灰色框之间的间距 */
 }
 
