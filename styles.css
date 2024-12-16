@@ -232,7 +232,7 @@ video {
 .slider-dots {
     position: relative;
     z-index: 9999;
-    margin-top: 80px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
