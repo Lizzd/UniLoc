@@ -231,8 +231,19 @@
 
         <section class="abstract-section">
             <h2 style="text-align: center;"> Approach</h2>
-            <p>This is where you introduce your project. You can talk about the problem, your approach, and the
-                outcome.</p>
+            <p>
+                <span style="font-weight: bold;">UniLoc architecture:</span>
+                To the best of our knowledge, our approach, UniLoc, is the first place recognition solution that
+                exhibits
+                any single modality (text, image, or point cloud). Here shows the pipeline of our UniLoc.
+                Given a triplet consisting of text descriptions, a single image, and the corresponding 3D submap, we
+                first align the image with the point cloud and the image with the text at the instance level.
+                Next, we aggregate the instance-level descriptors into a place-level representation. Through this
+                two-level alignment pipeline, we achieve the integration of descriptive information from three
+                modalities into a shared embedding space. This enables
+                cross-modal retrieval between any two modalities, allowing UniLoc to perform place recognition using any
+                single modality.
+            </p>
             <img src="pipeline.png" width="1027" height="250"
                  style="display: block; margin: 0 auto; padding: 0; border: none;">
         </section>
