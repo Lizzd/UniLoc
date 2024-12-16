@@ -18,7 +18,7 @@
     <meta name="description" content="UniLoc: Towards Universal Place Recognition Using Any Single Modality">
     <meta property="og:title" content="UniLoc: Towards Universal Place Recognition Using Any Single Modality"/>
     <meta property="og:description" content="UniLoc: Towards Universal Place Recognition Using Any Single Modality"/>
-    <meta property="og:url" content="https://lizzd.github.io/UniLoc/"/>
+    <meta property="og:url" content="https://yan-xia.github.io/projects/UniLoc/"/>
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
     <meta property="og:image" content="static/image/your_banner_image.png"/>
     <meta property="og:image:width" content="1200"/>
@@ -159,204 +159,305 @@
     </div>
 </section>
 </header>
-
-<main>
-    <div class="container">
-
-        <section class="gallery">
-            <!-- <h2>Demo</h2> -->
-            <!--            <video controls width="500" height="300">-->
-            <!--                <source src="static/videos/Text_to_Image.mp4" type="video/mp4">-->
-            <!--                Your browser does not support the video tag.-->
-            <!--            </video>-->
-            <!--            <video id="teaser" autoplay muted loop playsinline controls width="500" height="300">-->
-            <!--                <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">-->
-            <!--            </video>-->
-
-            <video id="video7" autoplay muted loop playsinline controls width="950" height="570">
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <video id="teaser" autoplay muted loop playsinline controls width="100%">
                 <source src="static/videos/demo2_resized.mp4" type="video/mp4">
             </video>
+            <h2 class="subtitle has-text-centered">
+                <strong>We present UniLoc, a solution designed for city-scale place recognition using any one of three
+                    modalities: text, image, or
+                    point cloud.</strong>
+            </h2>
+        </div>
+    </div>
+</section>
 
-            <div class="video-container is-max-desktop">
-                <video id="video1" autoplay muted loop playsinline controls width="544" height="327">
-                    <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">
-                </video>
+<section class="gallery">
+    <h2>Localization results on the KITTI-360 dataset</h2>
+    <!--            <video controls width="500" height="300">-->
+    <!--                <source src="static/videos/Text_to_Image.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <video id="teaser" autoplay muted loop playsinline controls width="500" height="300">-->
+    <!--                <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">-->
+    <!--            </video>-->
 
-                <video id="video2" autoplay muted loop playsinline controls width="544" height="327">
-                    <source src="static/videos/Text_to_LiDAR_resized.mp4" type="video/mp4">
-                </video>
-            </div>
+    <!-- <video id="video7" autoplay muted loop playsinline controls width="950" height="470">
+       <source src="static/videos/demo2_resized.mp4" type="video/mp4">
+   </video> -->
 
-            <div class="video-container">
-                <video id="video3" autoplay muted loop playsinline controls width="544" height="327">
-                    <source src="static/videos/Image_to_LiDAR_resized.mp4" type="video/mp4">
-                </video>
+    <div class="video-container is-max-desktop">
+        <video id="video1" autoplay muted loop playsinline controls width="444" height="327">
+            <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">
+        </video>
 
-                <video id="video4" autoplay muted loop playsinline controls width="544" height="327">
-                    <source src="static/videos/LiDAR_to_Image_resized.mp4" type="video/mp4">
-                </video>
-            </div>
+        <video id="video2" autoplay muted loop playsinline controls width="444" height="327">
+            <source src="static/videos/Text_to_LiDAR_resized.mp4" type="video/mp4">
+        </video>
+    </div>
 
-            <div class="video-container">
-                <video id="video5" autoplay muted loop playsinline controls width="544" height="327">
-                    <source src="static/videos/Image_to_Image_resized.mp4" type="video/mp4">
-                </video>
+    <div class="video-container">
+        <video id="video3" autoplay muted loop playsinline controls width="444" height="327">
+            <source src="static/videos/Image_to_LiDAR_resized.mp4" type="video/mp4">
+        </video>
 
-                <video id="video6" autoplay muted loop playsinline controls width="544" height="327">
-                    <source src="static/videos/LiDAR_to_LiDAR_resized.mp4" type="video/mp4">
-                </video>
-            </div>
+        <video id="video4" autoplay muted loop playsinline controls width="444" height="327">
+            <source src="static/videos/LiDAR_to_Image_resized.mp4" type="video/mp4">
+        </video>
+    </div>
 
+    <div class="video-container">
+        <video id="video5" autoplay muted loop playsinline controls width="444" height="327">
+            <source src="static/videos/Image_to_Image_resized.mp4" type="video/mp4">
+        </video>
 
-        </section>
+        <video id="video6" autoplay muted loop playsinline controls width="444" height="327">
+            <source src="static/videos/LiDAR_to_LiDAR_resized.mp4" type="video/mp4">
+        </video>
+    </div>
 
-        <section class="abstract-section">
-            <h2 style="text-align: center;">Abstract</h2>
-            <p>To date, most place recognition methods focus on single-modality retrieval. While they perform well in
-                specific environments, cross-modal methods offer greater flexibility by allowing seamless switching
-                between map and query sources.
-                It also promises to reduce computation requirements by having a unified model, and achieving greater
-                sample efficiency by sharing parameters.
-                In this work, we develop a universal solution to place recognition, UniLoc, that works with any single
-                query modality (natural language, image, or point cloud).
-                UniLoc leverages recent advances in large-scale contrastive learning, and learns by matching
-                hierarchically at two levels: instance-level matching and scene-level matching.
-                Specifically, we propose a novel Self-Attention based Pooling (SAP) module to evaluate the importance of
-                instance descriptors when aggregated into a place-level descriptor.
-                Experiments on the KITTI-360 dataset demonstrate the benefits of cross-modality for place recognition,
-                achieving superior performance in cross-modal settings and competitive results also for uni-modal
-                scenarios. The code will be available upon acceptance.</p>
-            <img src="cover3.png" width="1027" height="320"
-                 style="display: block; margin: 0 auto; padding: 0; border: none;">
-        </section>
+</section>
 
+<!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+    <div class="hero-body">
+    <div class="grid-container">
+      <div class="grid-item">
+        <video poster="" id="tree" autoplay controls muted loop>
+          <source src="static/videos/Text_to_Image_resized.mp4"
+          type="video/mp4">
+          </video>
+      </div>
+      <div class="grid-item">
+        <video poster="" id="tree" autoplay controls muted loop>
+          <source src="static/videos/Text_to_LiDAR_resized.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item">
+        <video poster="" id="tree" autoplay controls muted loop>
+          <source src="static/videos/Image_to_LiDAR_resized.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item">
+        <video poster="" id="tree" autoplay controls muted loop>
+          <source src="static/videos/LiDAR_to_Image_resized.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item">
+        <video poster="" id="tree" autoplay controls muted loop>
+          <source src="static/videos/Image_to_Image_resized.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="grid-item">
+        <video poster="" id="tree" autoplay controls muted loop>
+          <source src="static/videos//LiDAR_to_LiDAR_resized.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section> -->
 
-        <section class="abstract-section">
-            <h2 style="text-align: center;"> Approach</h2>
-            <p>
-                <span style="font-weight: bold;">UniLoc architecture:</span>
-                To the best of our knowledge, our approach, UniLoc, is the first place recognition solution that
-                exhibits
-                any single modality (text, image, or point cloud). Here shows the pipeline of our UniLoc.
-                Given a triplet consisting of text descriptions, a single image, and the corresponding 3D submap, we
-                first align the image with the point cloud and the image with the text at the instance level.
-                Next, we aggregate the instance-level descriptors into a place-level representation. Through this
-                two-level alignment pipeline, we achieve the integration of descriptive information from three
-                modalities into a shared embedding space. This enables
-                cross-modal retrieval between any two modalities, allowing UniLoc to perform place recognition using any
-                single modality.
-            </p>
-            <img src="pipeline.png" width="1027" height="250"
-                 style="display: block; margin: 0 auto; padding: 0; border: none;">
-        </section>
-
-
-        <section class="abstract-section">
-            <h2 style="text-align: center;"> Examples</h2>
-            <div class="slider-container">
-                <!-- Left arrow -->
-                <button class="arrow prev">&#10094;</button>
-
-                <!-- Slides -->
-                <div class="slides">
-                    <div class="slide">
-                        <img src="static/images/T2I_30.png"
-                             alt="Successful Text-to-Image place recognition on KITTI-360 (09)">
-                        <h4>Successful Text-to-Image place recognition on KITTI-360 (09)</h4>
-                    </div>
-                    <div class="slide">
-                        <img src="static/images/T2I_82.png"
-                             alt="Unsuccessful Text-to-Image place recognition on KITTI-360 (09)">
-                        <h4>Unsuccessful Text-to-Image place recognition on KITTI-360 (09)</h4>
-                    </div>
-
-                    <div class="slide">
-                        <img src="static/images/T2P_35.png"
-                             alt="Successful Text-to-LiDAR place recognition on KITTI-360 (09)">
-                        <h4>Successful Text-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                    </div>
-                    <div class="slide">
-                        <img src="static/images/T2P_82.png"
-                             alt="Unsuccessful Text-to-LiDAR place recognition on KITTI-360 (09)">
-                        <h4>Unsuccessful Text-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                    </div>
-
-
-                    <div class="slide">
-                        <img src="static/images/I2P_264.png"
-                             alt="Successful Image-to-LiDAR place recognition on KITTI-360 (09)">
-                        <h4>Successful Image-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                    </div>
-                    <div class="slide">
-                        <img src="static/images/I2P_80.png"
-                             alt="Unsuccessful Image-to-LiDAR place recognition on KITTI-360 (09)">
-                        <h4>Unsuccessful Image-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                    </div>
-
-
-                    <div class="slide">
-                        <img src="static/images/P2I_93.png"
-                             alt="Successful LiDAR-to-Image place recognition on KITTI-360 (09)">
-                        <h4>Successful LiDAR-to-Image place recognition on KITTI-360 (09)</h4>
-                    </div>
-                    <div class="slide">
-                        <img src="static/images/P2I_65.png"
-                             alt="Unsuccessful LiDAR-to-Image place recognition on KITTI-360 (09)">
-                        <h4>Unsuccessful LiDAR-to-Image place recognition on KITTI-360 (09)</h4>
-                    </div>
-
-
-                    <div class="slide">
-                        <img src="static/images/I2I_110.png"
-                             alt="Successful Image-to-Image place recognition on KITTI-360 (09)">
-                        <h4>Successful Image-to-Image place recognition on KITTI-360 (09)</h4>
-                    </div>
-                    <div class="slide">
-                        <img src="static/images/I2I_78.png"
-                             alt="Unsuccessful Image-to-Image place recognition on KITTI-360 (09)">
-                        <h4>Unsuccessful Image-to-Image place recognition on KITTI-360 (09)</h4>
-                    </div>
-
-                    <div class="slide">
-                        <img src="static/images/P2P_251.png"
-                             alt="Successful LiDAR-to-LiDAR place recognition on KITTI-360 (09)">
-                        <h4>Successful LiDAR-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                    </div>
-                    <div class="slide">
-                        <img src="static/images/P2P_141.png"
-                             alt="Unsuccessful LiDAR-to-LiDAR place recognition on KITTI-360 (09)">
-                        <h4>Unsuccessful LiDAR-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                    </div>
-
+<section class="abstract-section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>To date, most place recognition methods focus on single-modality retrieval. While they perform
+                        well in
+                        specific environments, cross-modal methods offer greater flexibility by allowing seamless
+                        switching
+                        between map and query sources.
+                        It also promises to reduce computation requirements by having a unified model, and achieving
+                        greater
+                        sample efficiency by sharing parameters.
+                        In this work, we develop a universal solution to place recognition, UniLoc, that works with any
+                        single
+                        query modality (natural language, image, or point cloud).
+                        UniLoc leverages recent advances in large-scale contrastive learning, and learns by matching
+                        hierarchically at two levels: instance-level matching and scene-level matching.
+                        Specifically, we propose a novel Self-Attention based Pooling (SAP) module to evaluate the
+                        importance of
+                        instance descriptors when aggregated into a place-level descriptor.
+                        Experiments on the KITTI-360 dataset demonstrate the benefits of cross-modality for place
+                        recognition,
+                        achieving superior performance in cross-modal settings and competitive results also for
+                        uni-modal
+                        scenarios. The code will be available upon acceptance.</p>
 
                 </div>
-                <!-- Right arrow -->
-                <button class="arrow next">&#10095;</button>
             </div>
-
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </section>
-
-        <section class="BibTeX-container">
-            <h2>BibTeX</h2>
-            <div class="BibTeX">
-                <p>tbd</p>
-            </div>
-        </section>
+        </div>
     </div>
+    <!-- <h2 style="text-align: center;">Abstract</h2> -->
+    <div align="center" style="margin-top:20px;" style="margin-bottom:50px;">
+        <img style='height: auto; width: 50%; object-fit: contain' src="cover3.png" alt="overview_image">
+        <!-- <img src="cover3.png" width="1027" height="320" -->
+        <!-- style="display: block; margin: 0 auto; padding: 0; border: none;"> -->
+    </div>
+</section>
+
+
+<section class="abstract-section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3"> Approach</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        <span style="font-weight: bold;">UniLoc architecture:</span>
+                        To the best of our knowledge, our approach, UniLoc, is the first place recognition solution that
+                        exhibits any single modality (text, image, or point cloud). Here shows the pipeline of our
+                        UniLoc.
+                        Given a triplet consisting of text descriptions, a single image, and the corresponding 3D
+                        submap, we
+                        first align the image with the point cloud and the image with the text at the instance level.
+                        Next, we aggregate the instance-level descriptors into a place-level representation. Through
+                        this
+                        two-level alignment pipeline, we achieve the integration of descriptive information from three
+                        modalities into a shared embedding space. This enables
+                        cross-modal retrieval between any two modalities, allowing UniLoc to perform place recognition
+                        using any
+                        single modality.
+                    </p>
+                </div>
+                <img src="pipeline.png"
+                     class="teaser-fig"
+                     width="99%"
+                     alt="teaser-fig.">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="abstract-section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 style="text-align: center;"> Examples</h2>
+                <div class="slider-container">
+                    <!-- Left arrow -->
+                    <button class="arrow prev">&#10094;</button>
+                    <!-- Slides -->
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="static/images/T2I_30.png" class="teaser-fig" width="100%"
+                                 alt="Successful Text-to-Image place recognition on KITTI-360 (09)">
+                            <h4>Successful Text-to-Image place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+                        <div class="slide">
+                            <img src="static/images/T2I_82.png" class="teaser-fig" width="100%"
+                                 alt="Unsuccessful Text-to-Image place recognition on KITTI-360 (09)">
+                            <h4>Unsuccessful Text-to-Image place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+                        <div class="slide">
+                            <img src="static/images/T2P_35.png" class="teaser-fig" width="100%"
+                                 alt="Successful Text-to-LiDAR place recognition on KITTI-360 (09)">
+                            <h4>Successful Text-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+                        <div class="slide">
+                            <img src="static/images/T2P_82.png" class="teaser-fig" width="100%"
+                                 alt="Unsuccessful Text-to-LiDAR place recognition on KITTI-360 (09)">
+                            <h4>Unsuccessful Text-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+
+                        <div class="slide">
+                            <img src="static/images/I2P_264.png" class="teaser-fig" width="100%"
+                                 alt="Successful Image-to-LiDAR place recognition on KITTI-360 (09)">
+                            <h4>Successful Image-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+                        <div class="slide">
+                            <img src="static/images/I2P_80.png" class="teaser-fig" width="100%"
+                                 alt="Unsuccessful Image-to-LiDAR place recognition on KITTI-360 (09)">
+                            <h4>Unsuccessful Image-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+
+                        <div class="slide">
+                            <img src="static/images/P2I_93.png" class="teaser-fig" width="100%"
+                                 alt="Successful LiDAR-to-Image place recognition on KITTI-360 (09)">
+                            <h4>Successful LiDAR-to-Image place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+                        <div class="slide">
+                            <img src="static/images/P2I_65.png" class="teaser-fig" width="100%"
+                                 alt="Unsuccessful LiDAR-to-Image place recognition on KITTI-360 (09)">
+                            <h4>Unsuccessful LiDAR-to-Image place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+
+                        <div class="slide">
+                            <img src="static/images/I2I_110.png" class="teaser-fig" width="100%"
+                                 alt="Successful Image-to-Image place recognition on KITTI-360 (09)">
+                            <h4>Successful Image-to-Image place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+                        <div class="slide">
+                            <img src="static/images/I2I_78.png" class="teaser-fig" width="100%"
+                                 alt="Unsuccessful Image-to-Image place recognition on KITTI-360 (09)">
+                            <h4>Unsuccessful Image-to-Image place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+                        <div class="slide">
+                            <img src="static/images/P2P_251.png" class="teaser-fig" width="100%"
+                                 alt="Successful LiDAR-to-LiDAR place recognition on KITTI-360 (09)">
+                            <h4>Successful LiDAR-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+                        <div class="slide">
+                            <img src="static/images/P2P_141.png" class="teaser-fig" width="90%"
+                                 alt="Unsuccessful LiDAR-to-LiDAR place recognition on KITTI-360 (09)">
+                            <h4>Unsuccessful LiDAR-to-LiDAR place recognition on KITTI-360 (09)</h4>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right arrow -->
+        <button class="arrow next">&#10095;</button>
+    </div>
+
+    <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>{}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+</div>
 </main>
 
 <footer class="footer">
