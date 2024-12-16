@@ -29,7 +29,6 @@ header p {
 }
 
 
-
 /* Main Content */
 .container {
     width: 60%;
@@ -139,68 +138,104 @@ video {
     word-wrap: break-word; /* 防止超长内容溢出 */
 }
 
-/* Slider container */
-.slider-container {
-    position: relative;
-    width: 100%; /* 适配屏幕宽度 */
-    margin:0 auto;
-    overflow: hidden; /* 隐藏溢出的内容 */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* 内容居中 */
+.abstract-section {
+    padding: 2rem 0; /* 根据需要调整上下间距 */
 }
 
-/* Slides container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: calc(100% * 12); /* 动态宽度，容纳所有图片 */
+    width: calc(100% * 12); /* 根据幻灯片数量调整 */
 }
 
-/* Single slide */
 .slide {
-    flex: 0 0 100%; /* 每张幻灯片占据 100% 的宽度 */
+    flex: 0 0 100%;
     text-align: center;
 }
 
 .slide img {
-    max-width: 70%; /* 确保图片适配幻灯片宽度 */
-    height: auto; /* 保持比例 */
+    max-width: 60%;
+    height: auto;
     margin: auto;
     display: block;
     border: 1px solid #ddd;
     border-radius: 8px;
 }
 
-/* Arrows */
+/* 箭头改用三角形样式，用伪元素绘制 */
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #fff;
+    background: transparent;
     border: none;
     border-radius: 50%;
-    padding: 10px;
     cursor: pointer;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 40px;
+    height: 40px;
+    outline: none;
+    transition: transform 0.3s ease; /* 添加缩放动画 */
 }
 
+.prev::before,
+.next::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.prev::before {
+    border-right: 10px solid #333;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next::before {
+    border-left: 10px solid #333;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 悬停时放大箭头，移除背景更改，只保留缩放 */
 .arrow:hover {
-    background: #f0f0f0;
+    transform: translateY(-50%) scale(1.2);
 }
 
+/* 调整左右定位 */
 .prev {
-    left: 10px;
+    left: 0px;
 }
 
 .next {
-    right: 10px;
+    right: 0px;
 }
 
 .slider-dots {
-    text-align: center;
-    margin-top: 15px; /* 调整圆点与滑窗的距离 */
+    position: relative;
+    z-index: 9999;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dot {
@@ -211,8 +246,10 @@ video {
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .dot.active {
     background-color: #717171;
+    transform: scale(1.5);
 }

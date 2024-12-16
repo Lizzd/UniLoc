@@ -1,32 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelector(".slides");
-    const slidesCount = document.querySelectorAll(".slide").length;
-    const dots = document.querySelectorAll(".dot");
-    const prev = document.querySelector(".prev");
-    const next = document.querySelector(".next");
-    let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const slidesContainer = document.querySelector('.slides');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dots = document.querySelectorAll('.dot');
 
-    function updateSlider() {
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateSlidePosition() {
+        slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+
+    function updateDots() {
         dots.forEach((dot, index) => {
-            dot.classList.toggle("active", index === currentIndex);
+            dot.classList.toggle('active', index === currentIndex);
         });
     }
 
-    next.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % slidesCount;
-        updateSlider();
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlidePosition();
     });
 
-    prev.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + slidesCount) % slidesCount;
-        updateSlider();
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlidePosition();
     });
 
     dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
+        dot.addEventListener('click', () => {
             currentIndex = index;
-            updateSlider();
+            updateSlidePosition();
         });
     });
 });
