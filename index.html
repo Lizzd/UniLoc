@@ -1,84 +1,54 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniLoc: Towards Universal Place Recognition Using Any Single Modality</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-</head>
-<body>
-<header> -->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-    <!-- Replace the content tag with appropriate information -->
+    <!-- Meta tags: 使用UniLoc的项目信息 -->
     <meta name="description" content="UniLoc: Towards Universal Place Recognition Using Any Single Modality">
     <meta property="og:title" content="UniLoc: Towards Universal Place Recognition Using Any Single Modality"/>
     <meta property="og:description" content="UniLoc: Towards Universal Place Recognition Using Any Single Modality"/>
     <meta property="og:url" content="https://yan-xia.github.io/projects/UniLoc/"/>
-    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
     <meta property="og:image" content="static/image/your_banner_image.png"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
-
-    <!-- Keywords for your paper to be indexed by-->
     <meta name="keywords" content="UniLoc, Place Recognition">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <title>UniLoc: Towards Universal Place Recognition Using Any Single Modality</title>
-    <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-          rel="stylesheet">
 
+    <!-- 字体与样式，与VXP模板一致 -->
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
     <link rel="stylesheet" href="static/css/bulma.min.css">
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="static/css/index.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
     <script defer src="static/js/fontawesome.all.min.js"></script>
     <script src="static/js/bulma-carousel.min.js"></script>
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Hero: 标题与作者信息 -->
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">UniLoc: Towards Universal Place Recognition <br>
-                        Using Any Single Modality</h1>
+                    <h1 class="title is-1 publication-title">UniLoc: Towards Universal Place Recognition<br>Using Any
+                        Single Modality</h1>
                     <div class="is-size-5 publication-authors">
-                  <span class="author-block">
-                    <a href="https://yan-xia.github.io/">Yan Xia</a><sup>1,2*&dagger;</sup>,</span>
-                        <span class="author-block">
-                    <a href="">Zhendong Li</a><sup>1*</sup>,</span>
-                        <span class="author-block">
-                    <a href="">Yun-Jin Li</a><sup>1</sup>,
-                  </span>
-                        <span class="author-block">
-                    <a href="">Letian Shi</a><sup>1</sup>,
-                  </span>
-                        <span class="author-block">
-                    <a href="">Hu Cao</a><sup>1</sup>,
-                  </span>
-                        <span class="author-block">
-                    <a href="https://www.robots.ox.ac.uk/~joao/">João F. Henriques</a><sup>3</sup>,
-                  </span>
-                        <span class="author-block">
-                    <a href="https://cvg.cit.tum.de/members/cremers">Daniel Cremers</a><sup>1,2</sup>
-                  </span>
+                        <span class="author-block"><a href="https://yan-xia.github.io/" target="_blank">Yan Xia</a><sup>1,2*&dagger;</sup>,</span>
+                        <span class="author-block"><a href="#" target="_blank">Zhendong Li</a><sup>1*</sup>,</span>
+                        <span class="author-block"><a href="#" target="_blank">Yun-Jin Li</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="#" target="_blank">Letian Shi</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="#" target="_blank">Hu Cao</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="https://www.robots.ox.ac.uk/~joao/" target="_blank">João F. Henriques</a><sup>3</sup>,</span>
+                        <span class="author-block"><a href="https://cvg.cit.tum.de/members/cremers" target="_blank">Daniel Cremers</a><sup>1,2</sup></span>
                     </div>
 
                     <div class="is-size-5 publication-authors">
@@ -87,356 +57,242 @@
                         <span class="author-block"><sup>3</sup>VGG, University of Oxford</span>
                     </div>
 
+                    <div class="is-size-5 publication-authors">
+                        <!-- 如果有会议信息可添加，否则可留空 -->
+                    </div>
 
                     <div class="column has-text-centered">
                         <div class="publication-links">
-                            <!-- PDF Link. -->
-                            <!-- <img src="static/images/cvpr2024.jpg" alt="cvpr icon" width="180" height="40"> -->
-                            <!-- <span class="link-block">
-                              <a href=""
-                                 class="external-link button is-normal is-rounded is-dark">
-                                <span class="icon">
-                                    <i class="fas fa-file-pdf"></i>
-                                </span>
-                                <span>Camera-ready Paper</span>
-                              </a>
-                            </span> -->
+                            <!-- ArXiv soon -->
                             <span class="link-block">
-                      <a href=""
-                         class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                            <i class="ai ai-arxiv"></i>
-                        </span>
-                        <span>arXiv soon</span>
-                      </a>
-                    </span>
-                            <!-- Video Link. -->
-                            <!-- <span class="link-block">
-                              <a href="#overview_video"
-                                 class="external-link button is-normal is-rounded is-dark">
-                                <span class="icon">
-                                    <i class="fab fa-youtube"></i>
-                                </span>
-                                <span>Video</span>
-                              </a>
-                            </span> -->
-                            <!-- Supp Link. -->
-                            <!-- <span class="link-block">
-                              <a href="static/pdfs/supp.pdf"
-                                 class="external-link button is-normal is-rounded is-dark">
-                                <span class="icon">
-                                    <i class="fas fa-file-pdf"></i>
-                                </span>
-                                <span>Supp</span>
-                              </a>
-                            </span> -->
-                            <!-- Code Link. -->
-                            <span class="link-block">
-                      <a href=""
-                         class="external-link button is-normal is-rounded is-dark">
-                     <span class="icon">
-                         <i class="fab fa-github"></i>
-                     </span>
-                     <span>Code soon</span>
-                     </a>
-                    </span>
-                            <!-- Dataset Link. -->
-                            <!-- <span class="link-block">
-                              <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                                 class="external-link button is-normal is-rounded is-dark">
-                                <span class="icon">
-                                    <i class="far fa-images"></i>
-                                </span>
-                                <span>Data</span>
-                                </a>
-                            </span> -->
-                        </div>
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv soon</span>
+                </a>
+              </span>
 
+                            <!-- Code soon -->
+                            <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code soon</span>
+                </a>
+              </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-</header>
+
+<!-- Teaser video 区域：使用四视频网格来展示UniLoc示例视频 -->
 <section class="hero teaser">
     <div class="container is-max-desktop">
         <div class="hero-body">
-            <video id="teaser" autoplay muted loop playsinline controls width="100%">
-                <source src="static/videos/demo2_resized.mp4" type="video/mp4">
-            </video>
-            <h2 class="subtitle has-text-centered">
-                <strong>We present UniLoc, a solution designed for city-scale place recognition using any one of three
-                    modalities: text, image, or
-                    point cloud.</strong>
+            <div class="grid-container">
+                <!-- 从原有gallery中选择4个视频作为teaser示例 -->
+                <div class="grid-item">
+                    <video poster="" id="tree" autoplay controls muted loop>
+                        <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="grid-item">
+                    <video poster="" id="tree" autoplay controls muted loop>
+                        <source src="static/videos/Text_to_LiDAR_resized.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="grid-item">
+                    <video poster="" id="tree" autoplay controls muted loop>
+                        <source src="static/videos/Image_to_LiDAR_resized.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="grid-item">
+                    <video poster="" id="tree" autoplay controls muted loop>
+                        <source src="static/videos/LiDAR_to_Image_resized.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 第二个Teaser段落：使用一张图加说明性文字（原代码中使用cover3.png作为总结图）-->
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <img src="cover3.png" alt="Overview image" style="max-width:100%; height:auto;"/>
+            <h2 class="subtitle has-text-centered" style="margin-top:20px;">
+                UniLoc leverages cross-modal retrieval: text, image, and point cloud modalities, providing a universal
+                solution for city-scale place recognition.
             </h2>
         </div>
     </div>
 </section>
 
-<section class="gallery">
-    <h2>Localization results on the KITTI-360 dataset</h2>
-    <!--            <video controls width="500" height="300">-->
-    <!--                <source src="static/videos/Text_to_Image.mp4" type="video/mp4">-->
-    <!--                Your browser does not support the video tag.-->
-    <!--            </video>-->
-    <!--            <video id="teaser" autoplay muted loop playsinline controls width="500" height="300">-->
-    <!--                <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">-->
-    <!--            </video>-->
-
-    <!-- <video id="video7" autoplay muted loop playsinline controls width="950" height="470">
-       <source src="static/videos/demo2_resized.mp4" type="video/mp4">
-   </video> -->
-
-    <div class="video-container is-max-desktop">
-        <video id="video1" autoplay muted loop playsinline controls width="444" height="327">
-            <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">
-        </video>
-
-        <video id="video2" autoplay muted loop playsinline controls width="444" height="327">
-            <source src="static/videos/Text_to_LiDAR_resized.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="video-container">
-        <video id="video3" autoplay muted loop playsinline controls width="444" height="327">
-            <source src="static/videos/Image_to_LiDAR_resized.mp4" type="video/mp4">
-        </video>
-
-        <video id="video4" autoplay muted loop playsinline controls width="444" height="327">
-            <source src="static/videos/LiDAR_to_Image_resized.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="video-container">
-        <video id="video5" autoplay muted loop playsinline controls width="444" height="327">
-            <source src="static/videos/Image_to_Image_resized.mp4" type="video/mp4">
-        </video>
-
-        <video id="video6" autoplay muted loop playsinline controls width="444" height="327">
-            <source src="static/videos/LiDAR_to_LiDAR_resized.mp4" type="video/mp4">
-        </video>
-    </div>
-
-</section>
-
-<!-- <section class="hero teaser">
-    <div class="container is-max-desktop">
-    <div class="hero-body">
-    <div class="grid-container">
-      <div class="grid-item">
-        <video poster="" id="tree" autoplay controls muted loop>
-          <source src="static/videos/Text_to_Image_resized.mp4"
-          type="video/mp4">
-          </video>
-      </div>
-      <div class="grid-item">
-        <video poster="" id="tree" autoplay controls muted loop>
-          <source src="static/videos/Text_to_LiDAR_resized.mp4"
-          type="video/mp4">
-        </video>
-      </div>
-      <div class="grid-item">
-        <video poster="" id="tree" autoplay controls muted loop>
-          <source src="static/videos/Image_to_LiDAR_resized.mp4"
-          type="video/mp4">
-        </video>
-      </div>
-      <div class="grid-item">
-        <video poster="" id="tree" autoplay controls muted loop>
-          <source src="static/videos/LiDAR_to_Image_resized.mp4"
-          type="video/mp4">
-        </video>
-      </div>
-      <div class="grid-item">
-        <video poster="" id="tree" autoplay controls muted loop>
-          <source src="static/videos/Image_to_Image_resized.mp4"
-          type="video/mp4">
-        </video>
-      </div>
-      <div class="grid-item">
-        <video poster="" id="tree" autoplay controls muted loop>
-          <source src="static/videos//LiDAR_to_LiDAR_resized.mp4"
-          type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
-  </div>
-  </section> -->
-
-<section class="abstract-section">
+<!-- Abstract Section -->
+<section class="section hero is-light">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
-                    <p>To date, most place recognition methods focus on single-modality retrieval. While they perform
-                        well in
-                        specific environments, cross-modal methods offer greater flexibility by allowing seamless
-                        switching
-                        between map and query sources.
+                    <p>
+                        To date, most place recognition methods focus on single-modality retrieval. While they perform
+                        well in specific environments, cross-modal methods offer greater flexibility by allowing
+                        seamless switching between map and query sources.
                         It also promises to reduce computation requirements by having a unified model, and achieving
-                        greater
-                        sample efficiency by sharing parameters.
+                        greater sample efficiency by sharing parameters.
                         In this work, we develop a universal solution to place recognition, UniLoc, that works with any
-                        single
-                        query modality (natural language, image, or point cloud).
+                        single query modality (natural language, image, or point cloud).
                         UniLoc leverages recent advances in large-scale contrastive learning, and learns by matching
                         hierarchically at two levels: instance-level matching and scene-level matching.
                         Specifically, we propose a novel Self-Attention based Pooling (SAP) module to evaluate the
-                        importance of
-                        instance descriptors when aggregated into a place-level descriptor.
+                        importance of instance descriptors when aggregated into a place-level descriptor.
                         Experiments on the KITTI-360 dataset demonstrate the benefits of cross-modality for place
                         recognition,
                         achieving superior performance in cross-modal settings and competitive results also for
-                        uni-modal
-                        scenarios. The code will be available upon acceptance.</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <h2 style="text-align: center;">Abstract</h2> -->
-    <div align="center" style="margin-top:20px;" style="margin-bottom:50px;">
-        <img style='height: auto; width: 50%; object-fit: contain' src="cover3.png" alt="overview_image">
-        <!-- <img src="cover3.png" width="1027" height="320" -->
-        <!-- style="display: block; margin: 0 auto; padding: 0; border: none;"> -->
-    </div>
-</section>
-
-
-<section class="abstract-section">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3"> Approach</h2>
-                <div class="content has-text-justified">
-                    <p>
-                        <span style="font-weight: bold;">UniLoc architecture:</span>
-                        To the best of our knowledge, our approach, UniLoc, is the first place recognition solution that
-                        exhibits any single modality (text, image, or point cloud). Here shows the pipeline of our
-                        UniLoc.
-                        Given a triplet consisting of text descriptions, a single image, and the corresponding 3D
-                        submap, we
-                        first align the image with the point cloud and the image with the text at the instance level.
-                        Next, we aggregate the instance-level descriptors into a place-level representation. Through
-                        this
-                        two-level alignment pipeline, we achieve the integration of descriptive information from three
-                        modalities into a shared embedding space. This enables
-                        cross-modal retrieval between any two modalities, allowing UniLoc to perform place recognition
-                        using any
-                        single modality.
+                        uni-modal scenarios. The code will be available upon acceptance.
                     </p>
                 </div>
-                <img src="pipeline.png"
-                     class="teaser-fig"
-                     width="99%"
-                     alt="teaser-fig.">
             </div>
         </div>
     </div>
 </section>
 
-
-<section class="abstract-section">
+<!-- Approach Section (使用VXP模板格式) -->
+<section class="section hero is-light">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
-                <h2 style="text-align: center;">Examples</h2>
-                <div class="slider-container">
-                    <!-- 左箭头 -->
-                   <button class="arrow prev"></button>
+                <h2 class="title is-3">Approach</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        <strong>UniLoc architecture:</strong> To the best of our knowledge, our approach is the first to
+                        enable place recognition with any single modality (text, image, or point cloud). Given a triplet
+                        consisting of text, image, and corresponding 3D submap, we align image with point cloud and text
+                        at the instance level, then aggregate instance-level descriptors into a place-level
+                        representation. This two-level alignment integrates descriptive information from three
+                        modalities into a shared embedding space, enabling cross-modal retrieval between any two
+                        modalities.
+                    </p>
+                </div>
+                <img src="pipeline.png" class="teaser-fig" style="max-width:100%; height:auto;" alt="pipeline figure">
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <!-- 幻灯片容器 -->
-                    <div class="slides">
-                        <div class="slide">
-                            <img src="static/images/T2I_30.png" class="teaser-fig" alt="Successful Text-to-Image place recognition on KITTI-360 (09)">
-                            <h4>Successful Text-to-Image place recognition on KITTI-360 (09)</h4>
-                        </div>
+<!-- Examples Section: 将原"Examples"幻灯片转换为carousel，与第二个模板中类似的carousel方式-->
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h2 class="title is-3">Examples</h2>
+            <div id="results-carousel" class="carousel results-carousel">
+                <!-- 将原本的12个slide逐条变为carousel的item -->
 
-                        <div class="slide">
-                            <img src="static/images/T2I_82.png" class="teaser-fig" alt="Unsuccessful Text-to-Image place recognition on KITTI-360 (09)">
-                            <h4>Unsuccessful Text-to-Image place recognition on KITTI-360 (09)</h4>
-                        </div>
+                <div class="item">
+                    <img src="static/images/T2I_30.png"
+                         alt="Successful Text-to-Image place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Successful Text-to-Image place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                        <div class="slide">
-                            <img src="static/images/T2P_35.png" class="teaser-fig" alt="Successful Text-to-LiDAR place recognition on KITTI-360 (09)">
-                            <h4>Successful Text-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                        </div>
+                <div class="item">
+                    <img src="static/images/T2I_82.png"
+                         alt="Unsuccessful Text-to-Image place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Unsuccessful Text-to-Image place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                        <div class="slide">
-                            <img src="static/images/T2P_82.png" class="teaser-fig" alt="Unsuccessful Text-to-LiDAR place recognition on KITTI-360 (09)">
-                            <h4>Unsuccessful Text-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                        </div>
+                <div class="item">
+                    <img src="static/images/T2P_35.png"
+                         alt="Successful Text-to-LiDAR place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Successful Text-to-LiDAR place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                        <div class="slide">
-                            <img src="static/images/I2P_264.png" class="teaser-fig" alt="Successful Image-to-LiDAR place recognition on KITTI-360 (09)">
-                            <h4>Successful Image-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                        </div>
+                <div class="item">
+                    <img src="static/images/T2P_82.png"
+                         alt="Unsuccessful Text-to-LiDAR place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Unsuccessful Text-to-LiDAR place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                        <div class="slide">
-                            <img src="static/images/I2P_80.png" class="teaser-fig" alt="Unsuccessful Image-to-LiDAR place recognition on KITTI-360 (09)">
-                            <h4>Unsuccessful Image-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                        </div>
+                <div class="item">
+                    <img src="static/images/I2P_264.png"
+                         alt="Successful Image-to-LiDAR place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Successful Image-to-LiDAR place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                        <div class="slide">
-                            <img src="static/images/P2I_93.png" class="teaser-fig" alt="Successful LiDAR-to-Image place recognition on KITTI-360 (09)">
-                            <h4>Successful LiDAR-to-Image place recognition on KITTI-360 (09)</h4>
-                        </div>
+                <div class="item">
+                    <img src="static/images/I2P_80.png"
+                         alt="Unsuccessful Image-to-LiDAR place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Unsuccessful Image-to-LiDAR place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                        <div class="slide">
-                            <img src="static/images/P2I_65.png" class="teaser-fig" alt="Unsuccessful LiDAR-to-Image place recognition on KITTI-360 (09)">
-                            <h4>Unsuccessful LiDAR-to-Image place recognition on KITTI-360 (09)</h4>
-                        </div>
+                <div class="item">
+                    <img src="static/images/P2I_93.png"
+                         alt="Successful LiDAR-to-Image place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Successful LiDAR-to-Image place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                        <div class="slide">
-                            <img src="static/images/I2I_110.png" class="teaser-fig" alt="Successful Image-to-Image place recognition on KITTI-360 (09)">
-                            <h4>Successful Image-to-Image place recognition on KITTI-360 (09)</h4>
-                        </div>
+                <div class="item">
+                    <img src="static/images/P2I_65.png"
+                         alt="Unsuccessful LiDAR-to-Image place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Unsuccessful LiDAR-to-Image place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                        <div class="slide">
-                            <img src="static/images/I2I_78.png" class="teaser-fig" alt="Unsuccessful Image-to-Image place recognition on KITTI-360 (09)">
-                            <h4>Unsuccessful Image-to-Image place recognition on KITTI-360 (09)</h4>
-                        </div>
+                <div class="item">
+                    <img src="static/images/I2I_110.png"
+                         alt="Successful Image-to-Image place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Successful Image-to-Image place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                        <div class="slide">
-                            <img src="static/images/P2P_251.png" class="teaser-fig" alt="Successful LiDAR-to-LiDAR place recognition on KITTI-360 (09)">
-                            <h4>Successful LiDAR-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                        </div>
+                <div class="item">
+                    <img src="static/images/I2I_78.png"
+                         alt="Unsuccessful Image-to-Image place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Unsuccessful Image-to-Image place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                        <div class="slide">
-                            <img src="static/images/P2P_141.png" class="teaser-fig" alt="Unsuccessful LiDAR-to-LiDAR place recognition on KITTI-360 (09)">
-                            <h4>Unsuccessful LiDAR-to-LiDAR place recognition on KITTI-360 (09)</h4>
-                        </div>
-                    </div>
+                <div class="item">
+                    <img src="static/images/P2P_251.png"
+                         alt="Successful LiDAR-to-LiDAR place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Successful LiDAR-to-LiDAR place recognition on KITTI-360
+                        (09)</h2>
+                </div>
 
-                    <!-- 右箭头 -->
-                    <button class="arrow next"></button>
+                <div class="item">
+                    <img src="static/images/P2P_141.png"
+                         alt="Unsuccessful LiDAR-to-LiDAR place recognition on KITTI-360 (09)" class="center"
+                         style="max-width:70%;"/>
+                    <h2 class="subtitle has-text-centered">Unsuccessful LiDAR-to-LiDAR place recognition on KITTI-360
+                        (09)</h2>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="slider-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
 </section>
+<!-- End examples carousel -->
 
-
-
-<!--BibTex citation -->
+<!-- BibTeX citation -->
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
@@ -444,20 +300,23 @@
     </div>
 </section>
 <!--End BibTex citation -->
-</div>
-</main>
 
 <footer class="footer">
     <div class="container">
-        <p>This website is licensed under a
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
-                Creative Commons Attribution-ShareAlike 4.0 International License
-            </a>.
-        </p>
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This page was adapted from a responsive template. This website is licensed under a
+                        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                            Creative Commons Attribution-ShareAlike 4.0 International License
+                        </a>.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
-<!-- 引入外部JS -->
-<script src="script.js"></script>
+
 </body>
 </html>
-
