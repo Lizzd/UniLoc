@@ -23,13 +23,14 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="static/css/index.css">
-
+    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
     <script defer src="static/js/fontawesome.all.min.js"></script>
     <script src="static/js/bulma-carousel.min.js"></script>
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
+
 </head>
 <body>
 
@@ -86,46 +87,63 @@
     </div>
 </section>
 
-<!-- Teaser video 区域：使用四视频网格来展示UniLoc示例视频 -->
 <section class="hero teaser">
     <div class="container is-max-desktop">
         <div class="hero-body">
-            <div class="grid-container">
-                <!-- 从原有gallery中选择4个视频作为teaser示例 -->
-                <div class="grid-item">
-                    <video poster="" id="tree" autoplay controls muted loop>
-                        <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="grid-item">
-                    <video poster="" id="tree" autoplay controls muted loop>
-                        <source src="static/videos/Text_to_LiDAR_resized.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="grid-item">
-                    <video poster="" id="tree" autoplay controls muted loop>
-                        <source src="static/videos/Image_to_LiDAR_resized.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="grid-item">
-                    <video poster="" id="tree" autoplay controls muted loop>
-                        <source src="static/videos/LiDAR_to_Image_resized.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
+            <!-- 不指定width和height，由CSS控制自适应 -->
+            <video id="video7" autoplay muted loop playsinline controls style="width: 100%; height: auto;">
+                <source src="static/videos/demo2_resized.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+                <strong>We present UniLoc, a solution designed for city-scale place recognition using any one of three
+                    modalities: text, image, or
+                    point cloud.</strong>
+            </h2>
         </div>
     </div>
 </section>
 
-<!-- 第二个Teaser段落：使用一张图加说明性文字（原代码中使用cover3.png作为总结图）-->
 <section class="hero teaser">
     <div class="container is-max-desktop">
         <div class="hero-body">
-            <img src="cover3.png" alt="Overview image" style="max-width:100%; height:auto;"/>
-            <h2 class="subtitle has-text-centered" style="margin-top:20px;">
-                UniLoc leverages cross-modal retrieval: text, image, and point cloud modalities, providing a universal
-                solution for city-scale place recognition.
-            </h2>
+            <h2 class="title is-3 has-text-centered">Localization results on the KITTI-360 dataset</h2>
+            <div class="grid-container">
+                <!-- 第一行两个视频 -->
+                <div class="grid-item">
+                    <video poster="" id="tree" autoplay controls muted loop playsinline>
+                        <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="grid-item">
+                    <video poster="" id="tree" autoplay controls muted loop playsinline>
+                        <source src="static/videos/Text_to_LiDAR_resized.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- 第二行两个视频 -->
+                <div class="grid-item">
+                    <video poster="" id="tree" autoplay controls muted loop playsinline>
+                        <source src="static/videos/Image_to_LiDAR_resized.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="grid-item">
+                    <video poster="" id="tree" autoplay controls muted loop playsinline>
+                        <source src="static/videos/LiDAR_to_Image_resized.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- 第三行两个视频 -->
+                <div class="grid-item">
+                    <video poster="" id="tree" autoplay controls muted loop playsinline>
+                        <source src="static/videos/Image_to_Image_resized.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="grid-item">
+                    <video poster="" id="tree" autoplay controls muted loop playsinline>
+                        <source src="static/videos/LiDAR_to_LiDAR_resized.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -155,12 +173,15 @@
                         uni-modal scenarios. The code will be available upon acceptance.
                     </p>
                 </div>
+                <!-- 在abstract文本之后插入cover3.png，且使图片宽度与布局匹配 -->
+                <img src="cover3.png" alt="overview_image" width="100%" height="auto"
+                     style="display:block; margin:20px auto 0 auto;">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Approach Section (使用VXP模板格式) -->
+
 <section class="section hero is-light">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
@@ -177,7 +198,8 @@
                         modalities.
                     </p>
                 </div>
-                <img src="pipeline.png" class="teaser-fig" style="max-width:100%; height:auto;" alt="pipeline figure">
+                <img src="pipeline.png" alt="pipeline figure" width="100%" height="auto"
+                     style="display:block; margin:20px auto 0;">
             </div>
         </div>
     </div>

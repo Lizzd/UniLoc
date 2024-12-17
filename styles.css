@@ -253,3 +253,16 @@ video {
     background-color: #717171;
     transform: scale(1.5);
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列 */
+    grid-gap: 20px; /* 根据需要调整间距 */
+    align-items: start;
+}
+
+.grid-item video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
