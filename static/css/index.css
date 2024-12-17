@@ -20,7 +20,7 @@ body {
 
 .teaser .hero-body {
   padding-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 3rem;
 }
 
 .teaser {
@@ -111,7 +111,12 @@ body {
 }
 
 .results-carousel {
-  overflow: hidden;
+  text-align: center;
+  /* top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: hidden; */
 }
 
 .results-carousel .item {
@@ -133,5 +138,36 @@ body {
   font-size: smaller;
 }
 
+/*
+Custom Style
+*/
+video {
+  display: block;
+  /* width: 50%; */
+  /* float: left; */
+}
+.grid-container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  /* padding: 200px; */
+}
+.grid-item {
+  padding: 20px;
+  text-align: center;
+}
 
+.grid-container video {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  /* width: 50%; */
+}
+/* .videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px dashed blue;
+} */
 
